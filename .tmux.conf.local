@@ -1,0 +1,2 @@
+# Add your local tmux config here
+bind a set-window-option synchronize-panes
