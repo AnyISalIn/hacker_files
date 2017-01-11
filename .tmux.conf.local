@@ -1,2 +1,35 @@
 # Add your local tmux config here
 bind a set-window-option synchronize-panes
+set-option -g allow-rename off
+
+#set-option -g status on
+#set-option -g status-interval 2
+##set-option -g status-utf8 on
+#set-option -g status-justify "centre"
+#set-option -g status-left-length 60
+#set-option -g status-right-length 90
+#set-option -g status-left "#(~/git/tmux-powerline/powerline.sh left)"
+#set-option -g status-right "#(~/git/tmux-powerline/powerline.sh right)"
+##set-window-option -g window-status-current-format "#[fg=colour235, bg=colour27]⮀#[fg=colour255, bg=colour27] #I ⮁ #W #[fg=colour27, bg=colour235]⮀"
+#
+
+
+set -g status-bg black
+set -g status-fg white
+
+#对齐方式
+ set-option -g status-justify centre
+
+ # 左下角
+ set-option -g status-left '#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]'
+ set-option -g status-left-length 20
+
+ # 窗口列表
+ #setw -g automatic-rename off
+# set-window-option -g window-status-format '#[dim]#I:#[default]#W#[fg=green,green]'
+# set-window-option -g window-status-current-format '#[fg=green]#I#[fg=green]:#[fg=green]#W#[fg=green]'
+
+ # 右下角
+ set -g status-right '#[fg=green][#[fg=cyan]%Y-%m-%d-%H:%M#[fg=green]]'
+ bind-key t send-keys "echo passwd|passwd --stdin root && sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/gi' /etc/ssh/sshd_config && service sshd restart"
+ bind-key o send-keys "cd /etc/yum.repos.d/ && rm -rf * && curl -O 192.168.20.170/repofile/centos-ustc.repo && curl -O 192.168.20.170/repofile/epel.repo"
