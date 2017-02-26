@@ -16,13 +16,9 @@ bind-key o send-keys 'cd /etc/yum.repos.d/ && rm -rf * && curl -O 192.168.20.170
 set-option -g renumber-windows on
 set-option -g visual-activity off
 bind-key -T prefix x kill-pane
-#set -g pane-border-fg magenta
-#set -g pane-active-border-fg green
-#set -g pane-active-border-bg default
-set -g pane-border-bg colour235
-set -g pane-border-fg colour238
-set -g pane-active-border-bg colour236
-set -g pane-active-border-fg colour51
+set -g pane-border-fg magenta
+set -g pane-active-border-fg green
+set -g pane-active-border-bg default
 
 
 set -g status-bg 'colour235'
@@ -37,7 +33,6 @@ set -g status-right-attr 'none'
 set -g message-fg 'colour222'
 set -g message-command-bg 'colour238'
 set -g status-attr 'none'
-set -g status-utf8 'on'
 set -g pane-border-fg 'colour238'
 set -g status-left-attr 'none'
 setw -g window-status-fg 'colour121'
