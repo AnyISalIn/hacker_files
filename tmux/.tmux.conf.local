@@ -47,3 +47,7 @@ set -g status-right '#[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]�
 setw -g window-status-format '#[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]#[default] #I  #W #[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]'
 setw -g window-status-current-format '#[fg=colour235,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour222,bg=colour238] #I  #W  #F #[fg=colour238,bg=colour235,nobold,nounderscore,noitalics]'
 
+
+# tmuxinator
+set -g base-index 1
+set -g pane-base-index 1

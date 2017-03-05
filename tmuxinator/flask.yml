@@ -1,0 +1,12 @@
+# ~/.tmuxinator/flask.yml
+
+name: flask-dev
+root: <%= @args[0] %>
+
+windows:
+    - debug:
+        layout: even-horizontal
+        panes:
+            - vim
+            - ipython
+    - server: python manage.py runserver

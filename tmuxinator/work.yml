@@ -1,0 +1,22 @@
+# ~/.tmuxinator/flask.yml
+
+name: work
+root: ~
+
+windows:
+    - build:
+        layout: even-horizontal
+        panes:
+            - c && cd manageiq-appliance-build
+            - ssh -t root@192.168.10.199 "df -H; tmux ls; virsh list; exec bash"
+    - dev:
+        layout: even-horizontal
+        panes:
+            - ipython
+            - pry
+    - proxy:
+        layout: even-horizontal
+        panes:
+            - ssh -t root@anyisalin.com -p 26522 "kcp-server status; exec bash"
+            - ssh -t centos@192.168.20.114 "sudo su -c 'tmux a'; exec bash"
+    - download: aria2c
