@@ -2,9 +2,12 @@
 
 ## How to use
 
-```
-$ git clone https://github.com/AnyISalIn/some_config_file.git ~/tmux_config`
+```shellscript
+$ git clone https://github.com/AnyISalIn/hacker_files.git
 
-$ cp ~/tmux_config/{.tmux.conf,.tmux.conf.local} ~/
-```
+$ cd hacker_files
 
+$ link -sv `pwd`/tmux/.tmux.conf ~/.tmux.conf
+
+$ link -sv `pwd`/tmux/.tmux.conf.local ~/.tmux.conf.local
+```
