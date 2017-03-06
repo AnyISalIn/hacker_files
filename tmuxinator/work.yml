@@ -1,4 +1,4 @@
-# ~/.tmuxinator/flask.yml
+# ~/.tmuxinator/work.yml
 
 name: work
 root: ~
@@ -8,7 +8,7 @@ windows:
         layout: even-horizontal
         panes:
             - c && cd manageiq-appliance-build
-            - ssh -t root@192.168.10.199 "df -H; tmux ls; virsh list; exec bash"
+            - ssh -t -L 7777:localhost:5900 root@192.168.10.199 "df -H; tmux ls; virsh list; exec bash"
     - dev:
         layout: even-horizontal
         panes:
