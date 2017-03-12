@@ -4709,8 +4709,12 @@ var rules = [
             "zzcartoon.com",
             "zzux.com",
 	        "github.com",
+	        "github.io",
 	        "telegram.org",
             "interfacelift.com",
+            "slack.com",
+            "cloudbase.it",
+            "hexo.io",
         ]
     ]
 ];
