@@ -13,6 +13,8 @@ set-option -g status-bg default
 set-option -g allow-rename off
 bind-key t send-keys 'echo passwd|passwd --stdin root && sed -i "s/PasswordAuthentication no/PasswordAuthentication yes/" /etc/ssh/sshd_config && systemctl restart sshd'
 bind-key o send-keys 'cd /etc/yum.repos.d/ && rm -rf * && curl -O 192.168.20.170/repofile/centos-ustc.repo && curl -O 192.168.20.170/repofile/epel.repo'
+bind-key r send-keys 'systemctl restart '
+bind-key u send-keys 'git config --global http.proxy "http://192.168.20.114:8123"'
 set-option -g renumber-windows on
 set-option -g visual-activity off
 bind-key -T prefix x kill-pane
@@ -51,3 +53,6 @@ setw -g window-status-current-format '#[fg=colour235,bg=colour238,nobold,nounder
 # tmuxinator
 set -g base-index 1
 set -g pane-base-index 1
+
+# say
+set-option -g default-command "reattach-to-user-namespace -l zsh"
