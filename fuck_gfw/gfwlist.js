@@ -1456,7 +1456,6 @@ var rules = [
             "frontlinedefenders.org",
             "fscked.org",
             "fsurf.com",
-            "ftchinese.com",
             "ftp1.biz",
             "ftpserver.biz",
             "fucd.com",
@@ -1565,7 +1564,6 @@ var rules = [
             "git-scm.com",
             "git.io",
             "gitbooks.io",
-            "github.com",
             "gizlen.net",
             "gjczz.com",
             "glass8.eu",
@@ -4715,6 +4713,16 @@ var rules = [
             "slack.com",
             "cloudbase.it",
             "hexo.io",
+            "trello.com",
+            "docker.com",
+            "dropbox.com",
+            "gitbook.com",
+            "pythonscraping.com",
+            "jwt.io",
+            "heroku.com",
+            "herokuapp.com",
+            "dinosaurscode.xyz",
+            "startbootstrap.com",
         ]
     ]
 ];
