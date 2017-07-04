@@ -4723,6 +4723,7 @@ var rules = [
             "herokuapp.com",
             "dinosaurscode.xyz",
             "startbootstrap.com",
+            "tour.go-zh.org",
         ]
     ]
 ];
